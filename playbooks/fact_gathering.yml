@@ -8,7 +8,7 @@
   - name: Return all available z/os facts
     ibm.ibm_zos_core.zos_gather_facts:
       gather_subset: sys
-      register: zos_facts
+    register: zos_facts
 
   - name: Debug z/os facts
     ansible.builtin.debug:
