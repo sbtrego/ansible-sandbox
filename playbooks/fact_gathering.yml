@@ -1,5 +1,5 @@
 ---
-- name: Ping z/OS node
+- name: Gather all available z/os facts
   hosts: zos
   gather_facts: false
   environment: "{{ environment_vars }}"
