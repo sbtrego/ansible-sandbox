@@ -6,5 +6,10 @@
 
   tasks: 
   - name: Return all available z/os facts
-  ibm.ibm.zos.core.zos_gather_facts:
-    gather_subset: all
+    ibm.ibm.zos.core.zos_gather_facts:
+    gather_subset: sys
+    register: zos_facts
+
+  - name: Debug z/os facts
+    ansible.builtin.debug:
+      var: zos_facts
