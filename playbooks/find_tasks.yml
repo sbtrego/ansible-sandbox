@@ -1,0 +1,13 @@
+- name: Gather all started tasks
+  hosts: zos
+  gather_facts: false
+  environment: "{{ environment_vars }}"
+
+  tasks: 
+  - name: Display all started tasks
+    ibm.ibm_zos_core.zos_job_query:
+      register: active_jobs
+
+  - name: Debug active jobs
+    ansible.builtin.debug:
+      var: active_jobs
