@@ -1,5 +1,5 @@
 - name: Hello World JCL job
-  hosts: zos
+  hosts: zoslab
   gather_facts: false
   collections:
     - ibm.ibm_zos_core
