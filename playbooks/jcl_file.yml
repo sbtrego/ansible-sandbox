@@ -10,7 +10,7 @@
     - name: Submit Hello World job
       zos_job_submit:
         src: /inventory/hello_world.jcl
-        location: local
+        location: LOCAL
         wait_time_s: 60
         return_output: true
       register: job_output
