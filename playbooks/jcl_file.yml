@@ -9,11 +9,11 @@
     
     - name: Submit Hello World job
       zos_job_submit:
-        src: "{{ playbooks_dir }}/hello_world.jcl"
-        location: LOCAL
-        wait_time_s: 60
-        return_output: true
-      register: job_output
+      src: "{{ playbook_dir }}/Hello_JCL.txt" 
+      location: LOCAL
+      encoding:
+        from: UTF-8
+        to: IBM-1047
 
     - name: Show job ID and return code
       debug:
