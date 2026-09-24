@@ -9,9 +9,9 @@
     
     - name: Submit Hello World job
       zos_job_submit:
-      src: "{{ playbook_dir }}/hello_world.txt" 
-      location: LOCAL
-      encoding:
+        src: "{{ playbook_dir }}/hello_world.txt" 
+        location: LOCAL
+        encoding:
         from: UTF-8
         to: IBM-1047
 
