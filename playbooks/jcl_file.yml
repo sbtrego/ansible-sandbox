@@ -9,7 +9,7 @@
     
     - name: Submit Hello World job
       zos_job_submit:
-        src: /u/ibmuser/hello_world.jcl
+        src: /inventory/hello_world.jcl
         location: local
         wait_time_s: 60
         return_output: true
